@@ -1,5 +1,5 @@
 name: crypto_alarm
-description: A new Flutter project.
+description: App that features alarm creation in relation to the market of cryptocurrency.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -23,3 +23,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/suicidal-jamaican.png
