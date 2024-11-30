@@ -30,6 +30,7 @@ class FrontPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            //App bar
             pinned: true,
             title: Text('CryptoAlarm'),
             actions: [
@@ -50,40 +51,109 @@ class FrontPage extends StatelessWidget {
               ),
             ],
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              childCount: 1,
-              (BuildContext context, int index) {
-                return Column(
-                  children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Container(
-                              width: screenWidth * .50,
-                              height: screenHeight * .46,
-                              //padding: EdgeInsets.all(10),
-                              child: Image.asset('assets/suicidal-jamaican.png',
-                                  fit: BoxFit.contain)),
-                          Container(
-                            width: screenWidth * .50,
-                            height: screenHeight * .46,
-                            child: Placeholder(), //Crypto widget
+          SliverPadding(
+            //App screen background structure
+            padding: EdgeInsets.only(
+                left: screenWidth * .05,
+                right: screenWidth * .05), // Body margins
+            sliver: SliverList(
+              delegate: SliverChildBuilderDelegate(
+                childCount: 1,
+                (BuildContext context, int index) {
+                  return Padding(
+                    padding: EdgeInsets.only(
+                        top: screenHeight * .2, bottom: screenHeight * .2),
+                    child: Column(
+                      //Column fitting all widgets on screen
+                      children: [
+                        Container(
+                          child: Row(
+                            //First row widgets
+                            children: [
+                              Container(
+                                //Alarms widget whole selection
+                                width: screenWidth * .45,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          bottom: screenHeight * .015),
+                                      child: Container(
+                                        child: InkWell(
+                                          onTap: () {
+                                            print('Crypto');
+                                          },
+                                          borderRadius:
+                                              BorderRadius.circular(50),
+                                          child: Image.asset(
+                                            'assets/alarm-icon.png',
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Text('Alarms')
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                //Crypto Market widget whole section
+                                width: screenWidth * .45,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          bottom: screenHeight * .015),
+                                      child: Container(
+                                        child: InkWell(
+                                          onTap: () {
+                                            print('Crypto');
+                                          },
+                                          borderRadius:
+                                              BorderRadius.circular(50),
+                                          child: Image.asset(
+                                              'assets/crypto-coin.png'),
+                                        ),
+                                      ),
+                                    ),
+                                    Text('Crypto Market')
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        Container(
+                          //News widget whole section
+                          width: screenWidth * .45,
+                          child: Padding(
+                            padding: EdgeInsets.only(top: screenHeight * .05),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    print('Crypto');
+                                  },
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        bottom: screenHeight * 0.015),
+                                    child: Image.asset(
+                                        'assets/newspaper-icon.png'),
+                                  ),
+                                ),
+                                Text('Market News')
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Container(
-                        width: screenWidth * .50,
-                        height: screenHeight * .46,
-                        child: Placeholder(), //Market News
-                      ),
-                    ),
-                  ],
-                );
-              },
+                  );
+                },
+              ),
             ),
           ),
         ],

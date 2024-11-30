@@ -25,3 +25,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/suicidal-jamaican.png
+    - assets/crypto-coin.png
+    - assets/newspaper-icon.png
+    - assets/alarm-icon.png
