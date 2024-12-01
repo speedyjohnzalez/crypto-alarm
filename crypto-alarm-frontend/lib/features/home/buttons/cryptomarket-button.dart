@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:crypto_alarm/features/crypto-page/crypto-front-page.dart';
 
 class Crypto_market_button extends StatelessWidget {
   const Crypto_market_button({super.key});
@@ -12,6 +13,7 @@ class Crypto_market_button extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(60), color: Colors.white),
       width: screenWidth * .375,
+      height: screenHeight * .14,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -20,10 +22,10 @@ class Crypto_market_button extends StatelessWidget {
             child: Container(
               child: InkWell(
                 onTap: () {
-                  print('Crypto');
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Crypto_page()));
                 },
                 borderRadius: BorderRadius.circular(50),
-                child: Image.asset('assets/crypto-coin.png'),
+                child: Image.asset('assets/xlm.png'),
               ),
             ),
           ),

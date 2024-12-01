@@ -12,6 +12,7 @@ class Alarm_button extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(60), color: Colors.white),
       width: screenWidth * .375,
+      height: screenHeight * .14,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -24,7 +25,7 @@ class Alarm_button extends StatelessWidget {
                 },
                 borderRadius: BorderRadius.circular(50),
                 child: Image.asset(
-                  'assets/alarm-icon.png',
+                  'assets/alarm-icon-3.png',
                 ),
               ),
             ),

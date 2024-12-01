@@ -11,6 +11,7 @@ class Market_news_button extends StatelessWidget {
     return Container(decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(60), color: Colors.white),
       width: screenWidth * .375,
+      height: screenHeight * .14,
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -21,7 +22,7 @@ class Market_news_button extends StatelessWidget {
               borderRadius: BorderRadius.circular(50),
               child: Padding(
                 padding: EdgeInsets.only(bottom: screenHeight * 0.015),
-                child: Image.asset('assets/newspaper-icon.png'),
+                child: Image.asset('assets/newspaper-icon-2.png'),
               ),
             ),
             Padding(
@@ -35,7 +36,6 @@ class Market_news_button extends StatelessWidget {
           )
           ],
         ),
-      
     );
   }
 }
