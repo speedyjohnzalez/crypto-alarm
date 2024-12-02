@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_alarm/features/home/buttons/alarm-button.dart';
-import 'package:crypto_alarm/features/home/buttons/cryptomarket-button.dart';
-import 'package:crypto_alarm/features/home/buttons/market-news-button.dart';
 import 'package:crypto_alarm/shared/custom-app-bar.dart';
 
-class Crypto_page extends StatelessWidget {
-  const Crypto_page({super.key});
+class Crypto_market_screen extends StatefulWidget {
+  const Crypto_market_screen({super.key});
+
+  @override
+  State<Crypto_market_screen> createState() => _Crypto_market_screenState();
+}
+
+class _Crypto_market_screenState extends State<Crypto_market_screen> {
+  TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,20 +32,48 @@ class Crypto_page extends StatelessWidget {
             SliverPadding(
               //App screen background structure
               padding: EdgeInsets.only(
-                  left: screenWidth * .05,
-                  right: screenWidth * .05),
-                  // Body margins
+                  left: screenWidth * .05, right: screenWidth * .05),
+              // Body margins
               sliver: SliverList(
                 delegate: SliverChildBuilderDelegate(
                   childCount: 1,
                   (BuildContext context, int index) {
                     return Padding(
-                      padding: EdgeInsets.only(top: screenHeight * .2),
+                      padding: EdgeInsets.only(top: screenHeight * 0.03),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         //Column fitting all widgets on screen
                         children: [
-                          
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(30)),
+                            width: screenWidth * 1,
+                            height: screenHeight * .04,
+                            child: TextField(
+                              autocorrect: false,
+                              keyboardType: TextInputType.text,
+                              controller: _controller,
+                              onChanged: (text) {
+                                setState(() {});
+                              },
+                              decoration: InputDecoration(
+                                  hintText: 'Search Crypto Market',
+                                  border: InputBorder.none,
+                                  prefixIcon: Icon(Icons.search)),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: screenHeight * 0.03),
+                            child: Container(
+                              height: screenHeight * 0.8,
+                              width: screenWidth * 1,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(30)),
+                              child: Placeholder(),
+                            ),
+                          ),
                         ],
                       ),
                     );
