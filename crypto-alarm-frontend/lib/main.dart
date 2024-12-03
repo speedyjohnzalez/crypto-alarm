@@ -1,6 +1,6 @@
 import 'package:crypto_alarm/features/home/home-layout.dart';
 import 'package:flutter/material.dart';
-import 'package:crypto_alarm/features/services/crypto_data_service.dart'; //KEEP!!!!!
+import 'package:crypto_alarm/features/services/fetch-crypto-prices.dart'; //KEEP!!!!!
 
 void main() {
   runApp(MyApp());
