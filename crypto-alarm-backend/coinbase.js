@@ -27,10 +27,9 @@ function coinbaseModule() {
                     if (matchingCrypto) {
                         console.log(`Crypto: ${matchingCrypto.name} : ${coinAcronym}, Price: ${price}, Time: ${time}`)
                     }
-                    //console.log(`Crypto: ${coinAcronym}, Price: ${price}, Time: ${time}`)
                 })
             })
-            
+
         })
 }
 

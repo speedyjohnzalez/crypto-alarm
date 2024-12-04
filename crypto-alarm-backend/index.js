@@ -1,3 +1,3 @@
-const coinbaseModule = require('./coinbasews')
+const coinbaseModule = require('./coinbase')
 
 coinbaseModule();
