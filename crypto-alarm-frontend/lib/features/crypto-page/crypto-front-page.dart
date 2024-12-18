@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:crypto_alarm/shared/custom-app-bar.dart';
+import "package:crypto_alarm/features/crypto-page/searchbar-functionality.dart";
 
 class Crypto_market_screen extends StatefulWidget {
   const Crypto_market_screen({super.key});
