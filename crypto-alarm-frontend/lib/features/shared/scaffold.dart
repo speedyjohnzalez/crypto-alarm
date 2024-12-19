@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_alarm/features/home/buttons/alarm-button.dart';
-import 'package:crypto_alarm/features/home/buttons/cryptomarket-button.dart';
-import 'package:crypto_alarm/features/home/buttons/market-news-button.dart';
-import 'package:crypto_alarm/shared/custom-app-bar.dart';
+import 'package:crypto_alarm/features/shared/custom_app_bar.dart';
 
-class Home_layout extends StatelessWidget {
-  const Home_layout({super.key});
+/// Custom scaffold widget for background color, screen division, and custom app bar
+class ScaffoldScreen extends StatelessWidget {
+  final List<Widget> childrenInput;
+
+  /// Custom scaffold widget constructor. Takes in a list of child widgets (children: [])
+  const ScaffoldScreen({super.key, required this.childrenInput});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class Home_layout extends StatelessWidget {
         ),
         child: CustomScrollView(
           slivers: [
-            Custom_app_bar(),
+            CustomAppBar(),
             SliverPadding(
               //App screen background structure
               padding: EdgeInsets.only(
@@ -40,17 +41,7 @@ class Home_layout extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         //Column fitting all widgets on screen
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            //First row widgets
-                            children: [
-                              Alarm_button(),
-                              Crypto_market_button(),
-                            ],
-                          ),
-                          Market_news_button()
-                        ],
+                        children: childrenInput
                       ),
                     );
                   },

@@ -1,6 +1,7 @@
 function coinbaseModule() {
     // Websocket URL
-    const ws = new WebSocket('wss://ws-feed.exchange.coinbase.com');
+    const wsURL = 'wss://ws-feed.exchange.coinbase.com'
+    const ws = new WebSocket(wsURL);
     
     // Message sent to retrieve data from the WS (Format on coinbase website)
     const message = {
@@ -10,7 +11,8 @@ function coinbaseModule() {
     }
 
     // Establishing connection to personal WS server
-    const personalWs = new WebSocket('ws://localhost:8080');
+    const serverURL = 'ws://localhost:8080'
+    const personalWs = new WebSocket(serverURL);
 
     // Establishing WS logic
     ws.addEventListener('open', (event) => { console.log('Coinbase WS initialized'), ws.send(JSON.stringify(message)) });

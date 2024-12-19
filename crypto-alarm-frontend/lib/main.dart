@@ -1,6 +1,5 @@
-import 'package:crypto_alarm/features/home/home-layout.dart';
+import 'package:crypto_alarm/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:crypto_alarm/features/services/fetch-crypto-prices.dart'; //KEEP!!!!!
 
 void main() {
   runApp(MyApp());
@@ -29,7 +28,7 @@ class FrontPage extends StatelessWidget {
           elevation: 0.0,
         ),
       ),
-      home: Home_layout(), // Set FrontPage as the main screen
+      home: HomeScreen(), // Set FrontPage as the main screen
     );
   }
 }

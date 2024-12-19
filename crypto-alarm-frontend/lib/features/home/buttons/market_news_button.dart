@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Market_news_button extends StatelessWidget {
-  const Market_news_button({super.key});
+class MarketNewsButton extends StatelessWidget {
+  const MarketNewsButton({super.key});
 
   @override
   Widget build(BuildContext context) {

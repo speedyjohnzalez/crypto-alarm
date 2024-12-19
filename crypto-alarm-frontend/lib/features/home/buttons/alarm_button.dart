@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Alarm_button extends StatelessWidget {
-  const Alarm_button({super.key});
+class AlarmButton extends StatelessWidget {
+  const AlarmButton({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -9,18 +9,18 @@ void main() async {
 
   print('Connected to: $uri');
 
-  /// Listen to incoming messages
+  // Listen to incoming messages
   socket.listen(
     (message) {
-
-      /// Function that converts incoming UTF8 encoded data into a dart map
+      // Function that converts incoming UTF8 encoded data into a dart map
       Map<String, dynamic> messageConverter() {
-        String utf8ToJsonString = utf8.decode(message);
-        Map<String, dynamic> jsonStringToMap = jsonDecode(utf8ToJsonString);
+        dynamic utf8Data = message;
+        String dataToJsonString = utf8.decode(utf8Data);
+        Map<String, dynamic> jsonStringToMap = jsonDecode(dataToJsonString);
         return jsonStringToMap;
       }
       
-      print(messageConverter());
+      print(messageConverter()['price']);
       
     },
     onDone: () {
@@ -31,9 +31,9 @@ void main() async {
     },
   );
 
-  /// Send a message to the WebSocket server / socket.add('Hello, WebSocket server!');
+  // Send a message to the WebSocket server / socket.add('Hello, WebSocket server!');
 
-  /// Close the WebSocket after 5 seconds
+  // Close the WebSocket after 5 seconds
   await Future.delayed(Duration(seconds: 5));
   socket.close();
   print('Connection closed by client.');

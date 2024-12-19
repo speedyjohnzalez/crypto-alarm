@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_alarm/features/crypto-page/crypto-front-page.dart';
+import 'package:crypto_alarm/features/crypto_section/crypto_market_screen.dart';
 
-class Crypto_market_button extends StatelessWidget {
-  const Crypto_market_button({super.key});
+class CryptoMarketButton extends StatelessWidget {
+  const CryptoMarketButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class Crypto_market_button extends StatelessWidget {
         onTap: () {
           Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Crypto_market_screen()),
+              MaterialPageRoute(builder: (context) => CryptoMarketScreen()),
             );
         },
         child: Column(
