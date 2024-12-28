@@ -1,4 +1,4 @@
-import 'package:crypto_alarm/features/home/home_screen.dart';
+import 'package:crypto_alarm/features/home/screen_home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,7 +28,7 @@ class FrontPage extends StatelessWidget {
           elevation: 0.0,
         ),
       ),
-      home: HomeScreen(), // Set FrontPage as the main screen
+      home: HomeScreen(), // Set HomeScreen() as the main screen
     );
   }
 }

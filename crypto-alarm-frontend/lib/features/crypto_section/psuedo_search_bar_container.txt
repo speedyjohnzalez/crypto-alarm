@@ -1,0 +1,7 @@
+1. Search results container has a column, with padding to keep text from not being visible due to the containers rounded corners.
+2. Column contains individual widgets, each widget displaying information pertaining to a crypto coin. All are shown by default.
+3. The search bar filters the widgets so that the desired widget pops up.
+    - Each widget is identified by a key that pertains to the crypto coin.
+    - All keys are stored in a list
+    - The search bar iterates over a list of keys until the desired crypto coin is found. The search results container returns the widget
+4. Widgets can be clicked to view extra info on widget, and to create an alarm.

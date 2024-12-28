@@ -1,0 +1,4 @@
+Ws client sends data to server
+Server sends data to clients connected to server
+
+http request handles data to get product ids for websocket subscription

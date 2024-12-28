@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:crypto_alarm/features/shared/custom_app_bar.dart';
+import 'package:crypto_alarm/features/shared/app_bar_custom.dart';
 
 /// Custom scaffold widget for background color, screen division, and custom app bar
 class ScaffoldScreen extends StatelessWidget {
@@ -37,7 +37,7 @@ class ScaffoldScreen extends StatelessWidget {
                   childCount: 1,
                   (BuildContext context, int index) {
                     return Padding(
-                      padding: EdgeInsets.only(top: screenHeight * .2),
+                      padding: EdgeInsets.only(top: screenHeight * 0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         //Column fitting all widgets on screen

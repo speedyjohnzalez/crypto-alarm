@@ -1,5 +1,5 @@
-const coinbaseModule = require("./coinbase-two-point-o")
-const myWS = require("./my-ws")
+const coinbaseModule = require('./clients/coinbase-client')
+const myWS = require('./servers/my-ws')
 
 // Startup my websocket server
 myWS.myWebSocket();
